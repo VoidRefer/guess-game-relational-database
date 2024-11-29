@@ -23,7 +23,7 @@ GAME() {
             echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $RANDOM_NUM."
             # Update user stats in the database
             USER_STATS_INSERT=$($PSQL "UPDATE users SET games_played = games_played + 1, best_game = LEAST(best_game, $NUMBER_OF_GUESSES) WHERE username='$USERNAME';")
-            
+            break
         fi
     done
     

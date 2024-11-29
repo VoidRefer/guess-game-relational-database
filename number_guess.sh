@@ -20,7 +20,7 @@ GAME() {
         then    
             echo "It's lower than that, guess again."
         else
-            echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $RANDOM_NUM."
+            echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $RANDOM_NUM. Nice job!"
             # Update user stats in the database
             USER_STATS_INSERT=$($PSQL "UPDATE users SET games_played = games_played + 1, best_game = LEAST(best_game, $NUMBER_OF_GUESSES) WHERE username='$USERNAME';")
             break

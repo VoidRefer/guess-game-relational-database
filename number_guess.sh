@@ -15,10 +15,10 @@ GAME() {
             echo "That is not an integer, guess again:"
         elif [[ $GUESS -lt $RANDOM_NUM ]]
         then    
-            echo "It's higher than that, guess again."
+            echo "It's higher than that, guess again:"
         elif [[ $GUESS -gt $RANDOM_NUM ]]
         then    
-            echo "It's lower than that, guess again."
+            echo "It's lower than that, guess again:"
         else
             echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $RANDOM_NUM. Nice job!"
             # Update user stats in the database
